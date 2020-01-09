@@ -22,7 +22,6 @@ pub use self::inner::*;
 pub fn rpc_handler<M: PubSubMetadata>(extension: impl IoHandlerExtension<M>) -> RpcHandler<M> {
 	let mut io = pubsub::PubSubHandler::default();
 	extension.augment(&mut io);
-
 	// add an endpoint to list all available methods.
 	let mut methods = io.iter().map(|x| x.0.clone()).collect::<Vec<String>>();
 	io.add_method("rpc_methods", {
@@ -97,7 +96,6 @@ mod inner {
 			}
 		})
 	}
-
 	fn map_cors<T: for<'a> From<&'a str>>(
 		cors: Option<&Vec<String>>,
 	) -> http::DomainsValidation<T> {
