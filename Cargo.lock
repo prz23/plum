@@ -273,7 +273,11 @@ name = "cid"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "50720fbd95ce5d9e51b6b81b7e4f5f93efdefb4b83aa46200dfc9fdfcd84b379"
-replace = "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)"
+dependencies = [
+ "multibase",
+ "multihash",
+ "unsigned-varint 0.3.3",
+]
 
 [[package]]
 name = "clang-sys"
@@ -977,7 +981,7 @@ dependencies = [
 name = "ipfs-block"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "minicbor",
  "multihash",
 ]
@@ -986,7 +990,7 @@ dependencies = [
 name = "ipfs-blockstore"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "ipfs-block",
  "thiserror",
 ]
@@ -1030,7 +1034,7 @@ dependencies = [
 name = "ipld"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "minicbor",
  "multibase",
  "serde",
@@ -1704,7 +1708,7 @@ version = "0.1.0"
 name = "plum_actor"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "hex-literal",
  "minicbor",
  "multihash",
@@ -1744,7 +1748,7 @@ version = "0.1.0"
 dependencies = [
  "async-trait",
  "base64",
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "jsonrpc-client",
  "libp2p-core",
  "log",
@@ -1798,7 +1802,7 @@ dependencies = [
 name = "plum_block"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "minicbor",
  "multihash",
  "plum_address",
@@ -1828,12 +1832,11 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "byteorder",
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "plum_actor",
  "plum_crypto",
  "plum_hashing",
  "plum_types",
- "thiserror",
 ]
 
 [[package]]
@@ -1891,7 +1894,7 @@ name = "plum_message"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "minicbor",
  "multihash",
  "plum_address",
@@ -1924,7 +1927,7 @@ dependencies = [
 name = "plum_piece"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "minicbor",
  "serde",
  "serde_json",
@@ -1935,7 +1938,7 @@ dependencies = [
 name = "plum_sector"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "minicbor",
  "plum_bigint",
  "plum_bytes",
@@ -1949,7 +1952,7 @@ dependencies = [
 name = "plum_tipset"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "hex",
  "minicbor",
  "multihash",
@@ -1967,7 +1970,7 @@ dependencies = [
 name = "plum_types"
 version = "0.1.0"
 dependencies = [
- "cid 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "cid 0.5.0 (git+https://github.com/PolkaX/rust-cid?branch=impl-cbor-and-json)",
  "lazy_static",
  "minicbor",
  "plum_bigint",

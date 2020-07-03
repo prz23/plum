@@ -7,8 +7,7 @@ license = "GPL-3.0"
 
 [dependencies]
 anyhow = "1.0"
-cid = { version = "0.5" , features = ["cbor", "json"] }
-thiserror = "1.0"
+cid = { version = "0.5", git = "https://github.com/PolkaX/rust-cid", branch = "impl-cbor-and-json" , features = ["cbor", "json"] }
 byteorder = "1.3"
 
 # plum
