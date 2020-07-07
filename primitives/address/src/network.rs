@@ -2,7 +2,7 @@
 
 lazy_static::lazy_static! {
     /// The default network type.
-    pub static ref NETWORK_DEFAULT: Box<Network> = Box::new(Network::Main);
+    pub static ref NETWORK_DEFAULT: Box<Network> = Box::new(Network::Test);
 }
 
 pub(crate) const NETWORK_MAINNET_PREFIX: &str = "f";
